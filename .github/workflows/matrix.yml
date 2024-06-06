@@ -18,7 +18,7 @@ jobs:
           # Secret token used for authentication.
           token: ${{ secrets.MATRIX_TOKEN }}
           # Identifier of the room to send the message to
-          room: '!DCKYnYOClwJharCIKQ:mozilla.org'
+          room: '#algori:mozilla.org'
           # The message to send (optional)
           message: GitHub Algori Actions
           # An HTML formatted version of the message to send
