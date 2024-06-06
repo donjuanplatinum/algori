@@ -16,7 +16,7 @@ jobs:
           server: matrix.donjuan.lecturify.net:8448
 
           # Secret token used for authentication.
-          token: ${{ secrets.TOKEN}}
+          token: ${{ secrets.TOKEN }}
 
           # Identifier of the room to send the message to
           room: '!DCKYnYOClwJharCIKQ:mozilla.org'
