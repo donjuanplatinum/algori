@@ -16,7 +16,7 @@ jobs:
           # Default: matrix.org
           server: matrix.donjuan.lecturify.net:8448
           # Secret token used for authentication.
-          token: ${{ secrets.MATRIX_TOKEN }}
+          token: ${{ matrix_token.MATRIX_TOKEN }}
           # Identifier of the room to send the message to
           room: '!DCKYnYOClwJharCIKQ:mozilla.org'
           # The message to send (optional)
