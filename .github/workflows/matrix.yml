@@ -6,28 +6,23 @@ on:
   pull_request:
     branches: [ "donjuanplatinum" ]
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps: 
-      - uses: lkiesow/matrix-notification@v1
+      - name: Send Messages
+        uses: lkiesow/matrix-notification@v1
         with:
           # The Matrix home server to send the message to
           # Default: matrix.org
           server: matrix.donjuan.lecturify.net:8448
-
           # Secret token used for authentication.
           token: ${{ secrets.MATRIX_TOKEN }}
-
-
           # Identifier of the room to send the message to
           room: '!DCKYnYOClwJharCIKQ:mozilla.org'
-
           # The message to send (optional)
           message: GitHub Algori Actions
-
           # An HTML formatted version of the message to send
           formatted_message: Hello <b>World</b>!
-
           # If to install the matrix-msg binary
           # Default: false
           tool: false
