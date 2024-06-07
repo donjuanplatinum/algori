@@ -1,0 +1,8 @@
+[module]
+  [[module.mounts]]
+    source = 'sorting'
+    target = 'sorting'
+  [[module.mounts]]
+    source = 'structure'
+    target = 'structure'
+
