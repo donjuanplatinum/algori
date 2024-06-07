@@ -26,7 +26,9 @@ jobs:
         ls
         hugo -F --cleanDestinationDir  # 生成静态文件
         mkdir -p public  # 确保public文件夹存在
+        echo 'public'
         ls public
+        echo 'now is .'
         ls .
         cp -r public/* ./  # 复制生成的静态文件到仓库根目录        
 
@@ -36,5 +38,5 @@ jobs:
         PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}  # 你的个人访问令牌
         EXTERNAL_REPOSITORY: donjuanplatinum/donjuanplatinum.github.io  # 你的GitHub Pages仓库
         PUBLISH_BRANCH: main  # 或者是你的GitHub Pages分支
-        PUBLISH_DIR: /docs
+        PUBLISH_DIR: ./
         commit_message: ${{ github.event.head_commit.message }}
