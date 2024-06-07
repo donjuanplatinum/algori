@@ -31,6 +31,7 @@ jobs:
         echo 'now is .'
         ls .
         cp -r public/* ./  # 复制生成的静态文件到仓库根目录        
+        mv algori docs
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
