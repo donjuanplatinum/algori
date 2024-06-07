@@ -21,7 +21,9 @@ jobs:
     - name: Build and Deploy
       run: |
         hugo new site 'algori'
-        cp -r doc/* content/
+        cd algori
+        pwd 
+        ls
         hugo -F --cleanDestinationDir  # 生成静态文件
         mkdir -p public  # 确保public文件夹存在
         cp -r public/* ./  # 复制生成的静态文件到仓库根目录        
