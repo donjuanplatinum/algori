@@ -21,7 +21,7 @@ jobs:
     - name: Build and Deploy
       run: |
         hugo new site 'algori'
-        cp doc/* algori/content/
+        cp -r doc/* algori/content/
         cd algori
         hugo -F --cleanDestinationDir  # 生成静态文件
         mkdir -p public  # 确保public文件夹存在
