@@ -21,7 +21,7 @@ jobs:
     - name: Build and Deploy
       run: |
         hugo new site 'algori'
-        cd algori
+        cd algori/doc
         pwd 
         ls
         hugo -F --cleanDestinationDir  # 生成静态文件
@@ -38,5 +38,5 @@ jobs:
         PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}  # 你的个人访问令牌
         EXTERNAL_REPOSITORY: donjuanplatinum/donjuanplatinum.github.io  # 你的GitHub Pages仓库
         PUBLISH_BRANCH: main  # 或者是你的GitHub Pages分支
-        PUBLISH_DIR: ./algori
+        PUBLISH_DIR: ./algori/doc
         commit_message: ${{ github.event.head_commit.message }}
