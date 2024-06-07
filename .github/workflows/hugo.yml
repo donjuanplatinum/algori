@@ -1,34 +1,36 @@
-name: GitHub Pages
+name: deploy
 
 on:
   push:
-  pull_request:
+    branches:
 
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
+    runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-        with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      with:
+          submodules: true
+          fetch-depth: 0
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: '0.100.2'
-          # 是否启用 hugo extend
-          extended: true
+    - name: Set up Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: "latest"
 
-      - name: Build
-        run: hugo --minify
+    - name: Build and Deploy
+      run: |
+        hugo -F --cleanDestinationDir  # 生成静态文件
+        mkdir -p public  # 确保public文件夹存在
+        cp -r public/* ./  # 复制生成的静态文件到仓库根目录        
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/main' }}
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-    
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}  # 你的个人访问令牌
+        EXTERNAL_REPOSITORY: donjuanplatinum/donjuanplatinum.github.io  # 你的GitHub Pages仓库
+        PUBLISH_BRANCH: main  # 或者是你的GitHub Pages分支
+        PUBLISH_DIR: ./
+        commit_message: ${{ github.event.head_commit.message }}
