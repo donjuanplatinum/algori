@@ -22,6 +22,7 @@ jobs:
       run: |
         hugo new site 'algori' --format=yaml
         cp -r doc/hugo.yaml algori/hugo.yaml
+        cp doc/_index.md algori/content/
         cp -r doc algori/content/docs
         cd algori
         git clone https://github.com/imfing/hextra.git themes/hextra
