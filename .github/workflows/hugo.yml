@@ -20,7 +20,7 @@ jobs:
 
     - name: Build and Deploy
       run: |
-        hugo new site 'algori'
+        hugo new site 'algori' --format=yaml
         cp -r doc/hugo.yaml algori/hugo.yaml
         cp -r doc algori/content/docs
         cd algori
