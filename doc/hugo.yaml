@@ -7,8 +7,9 @@ menu:
   main:
     - identifier: github
       name: Github
-      pageRef: "https://github.com/barrensea/algori"
-      weight: 1
+      url: "https://github.com/barrensea/algori"
+      weight: 6
+
 
   sidebar:
     - identifier: documentation
