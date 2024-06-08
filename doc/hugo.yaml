@@ -5,7 +5,22 @@ theme: hextra
 
 menu:
   main:
+    - identifier: github
+      name: Github
+      pageRef: "https://github.com/barrensea/algori"
+      weight: 1
+
+  sidebar:
     - identifier: documentation
       name: Documentation
-      pageRef: /docs
+      params:
+        type: separator
       weight: 1
+    - identifier: about
+      name: "About"
+      pageRef: "/about"
+      weight: 2
+    - identifier: hugoDocs
+      name: "Hugo Docs ↗"
+      url: "https://gohugo.io/documentation/"
+      weight: 3      
