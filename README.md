@@ -14,7 +14,7 @@
   <a href="https://github.com/barrensea/algori" rel="noopener">
  <img width=200px height=200px src="./imgs/algori.png"></a>
 
- <h3 align="center"><a href="https://join-lemmy.org">Algori</a></h3>
+ <h3 align="center"><a href="https://github.com/barrensea/algori">Algori</a></h3>
   <p align="center">
     Rust Algorithms
     <br />
