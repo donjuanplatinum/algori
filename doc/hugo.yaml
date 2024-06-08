@@ -9,19 +9,8 @@ menu:
       name: Github
       url: "https://github.com/barrensea/algori"
       weight: 6
+    - identifier: docs
+      name: Docs
+      pageRef: /docs
+      weight: 6
 
-
-  sidebar:
-    - identifier: documentation
-      name: Documentation
-      params:
-        type: separator
-      weight: 1
-    - identifier: about
-      name: "About"
-      pageRef: "/about"
-      weight: 2
-    - identifier: hugoDocs
-      name: "Hugo Docs ↗"
-      url: "https://gohugo.io/documentation/"
-      weight: 3      
