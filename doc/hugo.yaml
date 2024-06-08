@@ -2,3 +2,10 @@ baseURL: https://algori.github.io
 languageCode: en-us
 title: Algori
 theme: hextra
+
+menu:
+  main:
+    - identifier: documentation
+      name: Documentation
+      pageRef: /docs
+      weight: 1
