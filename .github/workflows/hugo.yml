@@ -34,7 +34,7 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}  # 你的个人访问令牌
-        EXTERNAL_REPOSITORY: barrensea/algori  # 你的GitHub Pages仓库
-        PUBLISH_BRANCH: gh-pages  # 或者是你的GitHub Pages分支
+        EXTERNAL_REPOSITORY: donjuanplatinum/donjuanplatinum.github.io  # 你的GitHub Pages仓库
+        PUBLISH_BRANCH: main  # 或者是你的GitHub Pages分支
         PUBLISH_DIR: ./algori/public
         commit_message: ${{ github.event.head_commit.message }}
