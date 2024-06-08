@@ -1,3 +1,7 @@
+---
+title: Sorting 排序
+math: true
+---
 # Sorting 排序
 
 + 插入排序
