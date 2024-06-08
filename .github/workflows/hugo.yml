@@ -22,7 +22,7 @@ jobs:
       run: |
         hugo new site 'algori'
         cp -r doc/hugo.yaml algori/hugo.yaml
-        cp -r doc/* algori/content/
+        cp -r doc algori/content/docs
         cd algori
         git clone https://github.com/imfing/hextra.git themes/hextra
         hugo -F --cleanDestinationDir  # 生成静态文件
