@@ -24,7 +24,6 @@ jobs:
         cp -r doc/hugo.yaml algori/hugo.yaml
         cp -r doc algori/content/docs
         cp README.md algori/content/docs/_index.md
-        cp README.md algori/content/_index.md
         sed -i 's/.\/doc//' ./algori/content/docs/_index.md
         sed -i 's/_index.md//' ./algori/content/docs/_index.md
         cd algori
