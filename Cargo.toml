@@ -2,5 +2,14 @@
 name = "algori"
 version = "0.1.0"
 edition = "2024"
-
+license = "GPL-2.0"
 [dependencies]
+
+[features]
+default = ["std"]
+doc = ["default"]
+std = ["alloc"]
+alloc = []
+
+[package.metadata.docs.rs]
+rustdoc-args = [ "--html-in-header", "katex-header.html" ]
