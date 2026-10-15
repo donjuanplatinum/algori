@@ -1,5 +1,6 @@
 #![cfg_attr(not(feature = "alloc"), no_std)]
 
-pub mod tree;
+/// Searching algorithms.
 pub mod search;
-
+/// Tree structures.
+pub mod tree;

@@ -1,5 +1,20 @@
 use core::cmp::Ordering;
 
+/// # Binary Search
+///
+/// Binary search efficiently locates an element in a sorted slice by repeatedly
+/// dividing the search range in half. At each iteration, the middle element is
+/// compared with the search key, and the half that cannot contain the key is
+/// discarded.
+///
+/// - Return Ok(idx) if the element is found.
+/// - Return Err(idx) if the key is absent. And the `idx` is the insertion position
+/// that preserves the sorted order may be used in other algorithms.
+///
+/// ## Complexity
+///
+/// - Time: $O(log n)$, where n is the slice length.
+/// - Space: $O(1)$, excluding any allocations performed by the comparator.
 #[inline]
 pub fn bsearch<T, F>(slice: &[T], key: &T, cmp: F) -> Result<usize, usize>
 where
